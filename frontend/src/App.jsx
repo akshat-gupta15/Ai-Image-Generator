@@ -29,8 +29,8 @@ function App() {
       });
 
       setImage(
-        `http://127.0.0.1:8000/generated_images/${response.data.image}`
-      );
+  `https://ai-image-generator-0asf.onrender.com/generated_images/${response.data.image}`
+);
     } catch (err) {
       console.error(err);
       alert("Image generation failed.");
