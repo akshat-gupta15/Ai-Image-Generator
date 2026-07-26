@@ -1,0 +1,535 @@
+@import "tailwindcss";
+
+/* ---------- Google Font ---------- */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* ---------- Reset ---------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #050816;
+  color: white;
+  overflow-x: hidden;
+}
+
+button,
+textarea {
+  font-family: inherit;
+}
+
+/* ---------- Background ---------- */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+
+.background-grid {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(255, 255, 255, .03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, .03) 1px, transparent 1px);
+
+  background-size: 45px 45px;
+
+  opacity: .4;
+}
+
+/* glowing circles */
+
+.app::before {
+  content: "";
+  position: absolute;
+
+  width: 450px;
+  height: 450px;
+
+  background: #2563eb;
+
+  border-radius: 50%;
+
+  filter: blur(180px);
+
+  top: -120px;
+  left: -120px;
+
+  opacity: .35;
+}
+
+.app::after {
+  content: "";
+  position: absolute;
+
+  width: 450px;
+  height: 450px;
+
+  background: #7c3aed;
+
+  border-radius: 50%;
+
+  filter: blur(180px);
+
+  bottom: -150px;
+  right: -100px;
+
+  opacity: .30;
+}
+
+/* ---------- Layout ---------- */
+
+.container {
+
+  position: relative;
+  z-index: 10;
+
+  width: 100%;
+  max-width: 1450px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 35px;
+}
+
+/* ---------- Panels ---------- */
+
+.left-panel,
+.right-panel {
+
+  background: rgba(255, 255, 255, .05);
+
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, .08);
+
+  border-radius: 28px;
+
+  padding: 42px;
+
+  min-height: 760px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start;
+
+  transition: .35s;
+}
+
+.left-panel:hover,
+.right-panel:hover {
+
+  transform: translateY(-6px);
+
+  border-color: #3b82f6;
+
+  box-shadow:
+    0 0 40px rgba(59, 130, 246, .18);
+
+}
+
+/* ---------- Badge ---------- */
+
+.badge {
+
+  display: inline-flex;
+
+  width: max-content;
+
+  padding: 10px 18px;
+
+  border-radius: 40px;
+
+  background: rgba(59, 130, 246, .18);
+
+  color: #7dd3fc;
+
+  margin-bottom: 22px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+/* ---------- Heading ---------- */
+
+.left-panel h1 {
+  font-size: 64px;
+  line-height: 72px;
+  font-weight: 800;
+
+  background: linear-gradient(to right,
+      #ffffff,
+      #60a5fa,
+      #8b5cf6);
+
+  background-clip: text;
+  /* Standard (where supported) */
+  -webkit-background-clip: text;
+  /* Chrome, Edge, Safari */
+
+  -webkit-text-fill-color: transparent;
+  color: #ffffff;
+  /* Fallback for unsupported browsers */
+
+  margin-bottom: 22px;
+}
+
+.subtitle {
+
+  color: #b8c1d8;
+
+  font-size: 18px;
+
+  line-height: 31px;
+
+  margin-bottom: 35px;
+}
+
+/* ---------- Textarea ---------- */
+
+textarea {
+
+  width: 100%;
+
+  height: 220px;
+
+  resize: none;
+
+  outline: none;
+
+  border: none;
+
+  border-radius: 18px;
+
+  background: #0f172a;
+
+  color: white;
+
+  padding: 22px;
+
+  font-size: 17px;
+
+  line-height: 30px;
+
+  border: 2px solid transparent;
+
+  transition: .3s;
+}
+
+textarea:focus {
+
+  border-color: #3b82f6;
+
+  box-shadow:
+    0 0 20px rgba(59, 130, 246, .3);
+
+}
+
+/* ---------- Chips ---------- */
+
+.chips {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin: 28px 0;
+}
+
+.chip {
+
+  padding: 11px 18px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  cursor: pointer;
+
+  color: white;
+
+  background: #111827;
+
+  transition: .25s;
+
+  font-size: 14px;
+}
+
+.chip:hover {
+
+  background: #2563eb;
+
+  transform: translateY(-3px);
+}
+
+/* ---------- Generate Button ---------- */
+
+.generate-btn {
+
+  margin-top: auto;
+
+  border: none;
+
+  border-radius: 16px;
+
+  cursor: pointer;
+
+  padding: 20px;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  color: white;
+
+  background: linear-gradient(90deg,
+      #2563eb,
+      #7c3aed);
+
+  transition: .3s;
+}
+
+.generate-btn:hover {
+
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 15px 35px rgba(37, 99, 235, .45);
+}
+
+/* ---------- Placeholder ---------- */
+
+.placeholder {
+
+  flex: 1;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-direction: column;
+
+  text-align: center;
+
+  color: #d1d5db;
+}
+
+.placeholder-icon {
+
+  font-size: 85px;
+
+  margin-bottom: 30px;
+
+  animation: float 3s ease infinite;
+}
+
+.placeholder h2 {
+
+  font-size: 34px;
+
+  margin-bottom: 15px;
+}
+
+.placeholder p {
+
+  color: #94a3b8;
+
+  max-width: 420px;
+
+  line-height: 30px;
+}
+
+/* ---------- Image ---------- */
+
+.image-card {
+
+  display: flex;
+
+  flex-direction: column;
+
+  height: 100%;
+}
+
+.image-card img {
+
+  flex: 1;
+
+  width: 100%;
+
+  object-fit: cover;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, .45);
+}
+
+/* ---------- Download ---------- */
+
+.download-btn {
+
+  margin-top: 25px;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  color: white;
+
+  font-weight: 600;
+
+  background: #2563eb;
+
+  padding: 16px;
+
+  border-radius: 14px;
+
+  transition: .3s;
+}
+
+.download-btn:hover {
+
+  background: #1d4ed8;
+}
+
+/* ---------- Animation ---------- */
+
+@keyframes float {
+
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+
+}
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:1100px) {
+
+  .container {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .left-panel,
+  .right-panel {
+
+    min-height: auto;
+
+  }
+
+  .left-panel h1 {
+
+    font-size: 48px;
+
+    line-height: 56px;
+
+  }
+
+  textarea {
+
+    height: 180px;
+
+  }
+
+}
+
+@media(max-width:700px) {
+
+  .app {
+
+    padding: 20px;
+
+  }
+
+  .left-panel,
+  .right-panel {
+
+    padding: 24px;
+
+  }
+
+  .left-panel h1 {
+
+    font-size: 38px;
+
+    line-height: 45px;
+
+  }
+
+  .subtitle {
+
+    font-size: 15px;
+
+  }
+
+  .generate-btn {
+
+    font-size: 16px;
+
+  }
+
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  width: 100%;
+  max-width: 1450px;
+
+  margin-top: 30px;
+  padding: 30px 0;
+
+  text-align: center;
+
+  color: #94a3b8;
+
+  position: relative;
+  z-index: 10;
+}
+
+.footer strong {
+  color: #60a5fa;
+}
+
+.footer::before {
+  content: "";
+  display: block;
+
+  width: 220px;
+  height: 1px;
+
+  margin: 0 auto 20px;
+
+  background: linear-gradient(90deg,
+      transparent,
+      #3b82f6,
+      #8b5cf6,
+      transparent);
+}
