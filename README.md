@@ -1,15 +1,20 @@
 # 🎨 AI Image Generator
 
-A modern AI-powered Image Generator built with **React**, **Vite**, **FastAPI**, and **Pollinations AI**.  
-This application transforms text prompts into AI-generated images through a clean cyberpunk-inspired interface.
+A modern **AI-powered Image Generator** built using **React, Vite, FastAPI, and Pollinations AI**. The application transforms text prompts into AI-generated artwork through a responsive cyberpunk-inspired interface with a seamless full-stack architecture.
+
+## 🌐 Live Demo
+
+🔗 **Live Website:** (https://ai-image-generator-theta-olive.vercel.app/)
+
+📂 **GitHub Repository:** https://github.com/Ai-Image-Generator
 
 ---
 
 ## 📸 Screenshots
 
-### 🏠 Home Screen
+### 🏠 Home Page
 
-![Home Screen](screenshots/home.png)
+![Home](screenshots/home.png)
 
 ### 🎨 Generated Image
 
@@ -19,40 +24,67 @@ This application transforms text prompts into AI-generated images through a clea
 
 # ✨ Features
 
-- 🎨 AI Image Generation from text prompts
-- ⚛️ React + Vite frontend
-- ⚡ FastAPI backend
-- 🌌 Modern Cyberpunk UI
-- 💎 Glassmorphism Design
-- 📱 Fully Responsive
-- 🚀 Fast Image Generation
-- 📥 Download Generated Images
-- 🎯 Prompt Suggestions
-- 🌈 Animated Background & Gradient Effects
+- 🎨 Generate AI images from natural language prompts
+- ⚛️ Modern React + Vite frontend
+- ⚡ FastAPI backend with REST API
+- 🤖 Integrated with Pollinations AI
+- 💎 Cyberpunk-inspired UI with Glassmorphism
+- 📥 One-click image download
+- 💡 Prompt suggestion chips
+- 📱 Fully responsive design
+- 🌈 Animated gradients and glowing effects
+- 🚀 Deployed on Vercel & Render
 
 ---
 
-# 🛠️ Tech Stack
+# 🛠 Tech Stack
 
-## Frontend
+### Frontend
 
 - React.js
 - Vite
-- CSS3
 - Axios
+- CSS3
 
-## Backend
+### Backend
 
 - FastAPI
 - Python
 - Requests
 - Pollinations AI API
 
+### Deployment
+
+- Vercel (Frontend)
+- Render (Backend)
+
+---
+
+# 🏗️ Architecture
+
+```
+             User
+               │
+               ▼
+      React + Vite Frontend
+               │
+         REST API (Axios)
+               │
+               ▼
+      FastAPI Backend (Render)
+               │
+               ▼
+       Pollinations AI API
+               │
+               ▼
+       Generated Image
+```
+
 ---
 
 # 📂 Project Structure
 
-```text
+```
 AI-Image-Generator/
 │
 ├── backend/
@@ -66,7 +98,8 @@ AI-Image-Generator/
 │   ├── src/
 │   ├── public/
 │   ├── package.json
-│   └── vite.config.js
+│   ├── vite.config.js
+│   └── index.html
 │
 ├── screenshots/
 │   ├── home.png
@@ -81,10 +114,10 @@ AI-Image-Generator/
 
 # ⚙️ Installation
 
-## Clone the Repository
+## Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/AI-Image-Generator.git
+git clone https://github.com/Ai-Image-Generator.git
 cd AI-Image-Generator
 ```
 
@@ -94,15 +127,9 @@ cd AI-Image-Generator
 
 ```bash
 cd backend
-```
 
-Create a virtual environment:
-
-```bash
 python -m venv venv
 ```
-
-Activate it:
 
 ### Windows
 
@@ -122,7 +149,7 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-Run the backend:
+Run the server:
 
 ```bash
 uvicorn main:app --reload
@@ -134,11 +161,13 @@ uvicorn main:app --reload
 
 ```bash
 cd frontend
+
 npm install
+
 npm run dev
 ```
 
-Open:
+Visit:
 
 ```
 http://localhost:5173
@@ -148,25 +177,25 @@ http://localhost:5173
 
 # 🚀 How It Works
 
-1. Enter a descriptive prompt.
+1. Enter a creative text prompt.
 2. Click **Generate Image**.
-3. The prompt is sent to the FastAPI backend.
-4. Pollinations AI generates the image.
-5. The generated artwork is displayed instantly.
+3. The frontend sends the prompt to the FastAPI backend.
+4. The backend requests an image from Pollinations AI.
+5. The generated image is returned and displayed instantly.
 6. Download the generated image with one click.
 
 ---
 
-# 📌 Future Enhancements
+# 🔮 Future Improvements
 
 - User Authentication
-- Prompt History
-- AI Model Selection
+- Image History
+- Multiple AI Models
+- AI Image Variations
 - Image Upscaling
-- Image Variations
 - Favorites Collection
 - Dark / Light Theme
-- Cloud Storage Support
+- Cloud Image Storage
 
 ---
 
@@ -174,16 +203,17 @@ http://localhost:5173
 
 **Akshat Gupta**
 
-GitHub: https://github.com/akshat-gupta15
-
-LinkedIn: www.linkedin.com/in/akshat-gupta-3910911bb
+- GitHub: https://github.com/akshat-gupta15
+- LinkedIn: www.linkedin.com/in/akshat-gupta-3910911bb
 
 ---
 
 # 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
 
 ---
 
-## ⭐ If you like this project, consider giving it a star on GitHub!
+## ⭐ Support
+
+If you found this project helpful, please consider **starring the repository** on GitHub.
